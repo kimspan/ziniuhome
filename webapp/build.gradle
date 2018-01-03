@@ -1,0 +1,16 @@
+project(':webapp'){
+    apply plugin: 'war'
+
+    dependencies {
+        compile project(':control')
+        providedCompile("org.springframework.boot:spring-boot-starter-thymeleaf")
+        providedCompile("net.sourceforge.nekohtml:nekohtml:1.9.22")
+        //WEB容器配置
+        providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
+        //providedCompile("org.springframework.boot:spring-boot-starter-jetty")
+    }
+}
+
+war {
+    baseName = "znxz"
+}

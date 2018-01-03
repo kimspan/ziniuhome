@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>课程审核列表</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 5px;
+            background-color: #f8f8f8;
+            font-family: "微软雅黑 Light";
+            max-width: 960px;
+        }
+        a {
+            float: right;margin: auto auto auto 26px;
+        }
+        hr {width: 100%;}
+        ul {padding: 0; list-style: none;}
+        #list li {float: left; margin: 8px;}
+        #card {display: none;}
+        .card {
+            border: 1px solid #666666;
+            width: 442px;
+            height: 198px;
+            color: #FF9B00;
+            background-color: #E0E0E0;
+            padding: 10px;
+            background-size: contain !important;
+        }
+        .card p {height: 13%;}
+        .card div {height: 28%;}
+        #ReviewBox {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 1px solid #666666;
+            padding: 16pt;
+            width: 50%;
+            background-color: #F4F4F4;
+        }
+        #ReviewBox p span {
+            vertical-align: top;
+        }
+        .up-title {margin: 0;}
+        .up-title input {width: 88%;}
+        .left-span {width: 50%;float: left;}
+        .ub-right-span {width: 50%;float: right;height: 166pt;margin: 12pt auto;background-size: contain !important;}
+        #ReviewBox textarea,#addr {
+            width: 72%;
+        }
+        #ReviewBox input {
+            padding: 2px;
+        }
+        .card-img-have {background-size: 100% !important;}
+    </style>
+</head>
+<body>
+    <div>
+        <span>课程审核列表</span>
+    </div>
+    <hr>
+    <ul id="list"></ul>
+    <div id="card">
+        <p>审核中</p>
+        <div data=""></div>
+        <p name="lecturerName"></p>
+        <p name="title"></p>
+    </div>
+    <div id="ReviewBox">
+        <span data="">审核课程</span>
+        <hr>
+        <p class="up-title"><span>课程主题：</span><input type="text" id="upTitle" value="" /></p>
+        <div>
+            <span class="left-span">
+                <p><span>内容简介：</span><textarea id="upDescrip" rows="5" readonly></textarea></p>
+                <p><span>适听受众：</span><textarea id="upAudience" rows="2" readonly></textarea></p>
+                <p>讲课时间：<input type="date" id="lectureDate" /><input type="time" id="lectureTime" /></p>
+                <p>讲课地点：<input type="text" id="addr" value="" /></p>
+            </span>
+            <span class="ub-right-span">
+            </span>
+        </div>
+        <hr>
+        <a href="javascript:review(2)">保留</a>
+        <a href="javascript:review(3)">通过</a>
+        <a href="javascript:closeBox()">返回</a>
+    </div>
+</body>
+<script src="/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="/commons.js" type="text/javascript"></script>
+<script src="/course/courseReview.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+</script>
+</html>

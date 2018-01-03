@@ -1,7 +1,6 @@
 rootProject.name = 'ziniuhome'
-include 'web'
-include 'controller'
-include 'service'
-include 'model'
 include 'common'
-
+include 'data'
+include 'service'
+include 'control'
+include 'webapp'
